@@ -21,7 +21,27 @@
   }
 }
 
+/* GPU Performance Boost */
 .gpu-accelerated {
   will-change: transform, opacity;
-  transform: translateZ(0); /* Forces GPU layer */
+  transform: translateZ(0); 
+}
+
+/* Mobile & Desktop Pillar Glow System */
+@layer utilities {
+  .pillar-node {
+    @apply transition-all duration-300 ease-in-out;
+    will-change: filter, transform;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Removes the blue box on tap for mobile */
+  }
+
+  /* Triggers glow on Hover (Mouse), Active (Touch/Tap), and Focus (Keyboard/Click) */
+  .pillar-node:hover, 
+  .pillar-node:active,
+  .pillar-node:focus-within {
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.9));
+    transform: scale(1.05);
+    z-index: 10;
+  }
 }
