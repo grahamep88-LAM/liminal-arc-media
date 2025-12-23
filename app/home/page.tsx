@@ -90,7 +90,7 @@ export default function MediaHub() {
         {/* 3. PILLAR GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full mb-12">
           
-          <a href="https://youtu.be/c3TFhMDaf4w?si=d85QKXGEoOArUPtO" target="_blank" rel="noopener noreferrer" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 hover:border-white/40 transition-all duration-500 shadow-2xl">
+          <a href="https://youtu.be/c3TFhMDaf4w?si=d85QKXGEoOArUPtO" target="_blank" rel="noopener noreferrer" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl">
             <img src="/liminal-minds-bg.jpg" alt="Minds" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <div className="relative z-20">
@@ -100,7 +100,7 @@ export default function MediaHub() {
             </div>
           </a>
 
-          <Link href="/originals" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 hover:border-white/40 transition-all duration-500 shadow-2xl">
+          <Link href="/originals" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl">
             <img src="/arc-originals-bg.jpg" alt="Originals" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <div className="relative z-20">
@@ -110,27 +110,30 @@ export default function MediaHub() {
             </div>
           </Link>
 
-          <Link href="/readycheck-av" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 hover:border-white/40 transition-all duration-500 shadow-2xl">
+          <Link href="/readycheck-av" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl">
             <img src="/ready-check-logo.jpg" alt="AV" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <div className="relative z-20">
               <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 uppercase mb-4 block group-hover:text-white/60 transition-colors">Technical Signal</span>
-              <h3 className="text-3xl md:text-4xl font-bold italic uppercase mb-2 tracking-tight">ReadyCheck AV</h3>
+              {/* ReadyCheck Centering Fix: Shrinks and Wraps on mobile */}
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold italic uppercase mb-2 tracking-tighter leading-tight">
+                ReadyCheck<br className="md:hidden" /> AV
+              </h3>
               <div className="h-[1px] w-6 bg-white/10 mx-auto group-hover:w-24 group-hover:bg-white transition-all" />
             </div>
           </Link>
         </div>
 
         {/* 4. THE LIORA SIGNAL PANEL */}
-        <Link href="/liora-signal" className="pillar-node group relative w-full h-64 rounded-[3.5rem] border border-white/10 bg-black overflow-hidden flex items-center justify-between px-16 shadow-2xl transition-all hover:border-white/40 mt-12 mb-32">
+        <Link href="/liora-signal" className="pillar-node group relative w-full h-64 rounded-[3.5rem] border border-white/10 bg-black overflow-hidden flex items-center justify-between px-16 shadow-2xl mt-12 mb-32">
           <img src="/liora-signal-bg.jpg" alt="Liora" className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-100 transition-all duration-1000" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
           <div className="relative z-20 flex flex-col text-left">
             <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 uppercase mb-2">The Starlight Shards Continuum</span>
-            <h3 className="text-3xl md:text-5xl font-bold italic uppercase text-white tracking-[0.1em]">The Liora Signal</h3>
+            <h3 className="text-2xl md:text-5xl font-bold italic uppercase text-white tracking-[0.1em]">The Liora Signal</h3>
           </div>
-          <div className="relative z-20 h-20 w-20 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-10 h-10"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+          <div className="relative z-20 h-16 w-16 md:h-20 md:w-20 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
           </div>
         </Link>
 
@@ -146,15 +149,13 @@ export default function MediaHub() {
             <span className="text-[9px] font-mono tracking-[1em] text-white/40 uppercase opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-2 group-hover:translate-y-0">
               [ DIRECT_EXTERNAL_LINK ]
             </span>
-            
             <h2 className="mt-4 text-4xl md:text-8xl font-black italic tracking-normal uppercase text-white/60 group-hover:text-white transition-all duration-700">
                 Join the Community
             </h2>
-            
             <div className="mt-6 h-[1px] w-8 bg-white/10 group-hover:w-full group-hover:bg-white transition-all duration-1000 ease-in-out" />
           </a>
 
-          <div className="flex gap-16 md:gap-24 items-center justify-center opacity-40 group hover:opacity-100 transition-opacity duration-700">
+          <div className="flex gap-12 md:gap-24 items-center justify-center opacity-40 group hover:opacity-100 transition-opacity duration-700">
             {socials.map((social) => (
               <a 
                 key={social.name}
@@ -162,7 +163,6 @@ export default function MediaHub() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-white transition-all duration-500 hover:[animation:icon-pulse_2s_ease-in-out_infinite]"
-                title={social.name}
               >
                 {social.icon}
               </a>

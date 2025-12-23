@@ -1,47 +1,20 @@
-@import "tailwindcss";
-
-@theme inline {
-  --animate-deep-travel: deep-travel 80s linear infinite;
-  --animate-optical-breath: optical-breath 10s ease-in-out infinite alternate;
-  --animate-galaxy-pan: galaxy-pan 150s linear infinite alternate;
-
-  @keyframes deep-travel {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-20vw, 15vh, 0); }
-  }
-
-  @keyframes optical-breath {
-    0% { transform: scale(1); opacity: 1; filter: blur(0px); }
-    100% { transform: scale(4); opacity: 0.2; filter: blur(6px); }
-  }
-
-  @keyframes galaxy-pan {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(5%, 5%); }
-  }
-}
-
-/* GPU Performance Boost */
-.gpu-accelerated {
-  will-change: transform, opacity;
-  transform: translateZ(0); 
-}
-
-/* Mobile & Desktop Pillar Glow System */
 @layer utilities {
   .pillar-node {
-    @apply transition-all duration-300 ease-in-out;
-    will-change: filter, transform;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent; /* Removes the blue box on tap for mobile */
+    @apply transition-all duration-700 ease-out;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  /* Triggers glow on Hover (Mouse), Active (Touch/Tap), and Focus (Keyboard/Click) */
-  .pillar-node:hover, 
-  .pillar-node:active,
-  .pillar-node:focus-within {
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.9));
-    transform: scale(1.05);
-    z-index: 10;
+  @media (hover: hover) {
+    .pillar-node:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+    }
+  }
+
+  .pillar-node:active {
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    transform: scale(0.98); /* Tactile press feel on mobile */
   }
 }
