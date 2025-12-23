@@ -28,15 +28,20 @@
 
 @layer utilities {
   .pillar-node {
-    /* Subtle border transition without the glow rings */
-    @apply transition-all duration-500 ease-in-out border-white/10;
     -webkit-tap-highlight-color: transparent;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Hard block on all glow effects */
+    box-shadow: none !important;
+    filter: none !important;
   }
 
   .pillar-node:hover,
-  .pillar-node:active {
-    /* Professional lift and border highlight */
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-4px);
+  .pillar-node:active,
+  .pillar-node:focus-within {
+    /* No glow, just a clean border highlight and lift */
+    box-shadow: none !important;
+    filter: none !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-5px);
   }
 }
