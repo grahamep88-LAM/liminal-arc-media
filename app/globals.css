@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme inline {
+  --animate-deep-travel: deep-travel 80s linear infinite;
+  --animate-optical-breath: optical-breath 10s ease-in-out infinite alternate;
+  --animate-galaxy-pan: galaxy-pan 150s linear infinite alternate;
+
+  @keyframes deep-travel {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-20vw, 15vh, 0); }
+  }
+
+  @keyframes optical-breath {
+    0% { transform: scale(1); opacity: 1; filter: blur(0px); }
+    100% { transform: scale(4); opacity: 0.2; filter: blur(6px); }
+  }
+
+  @keyframes galaxy-pan {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(5%, 5%); }
+  }
+}
+
+.gpu-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Forces GPU layer */
+}
