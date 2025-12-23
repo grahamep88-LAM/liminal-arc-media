@@ -90,8 +90,8 @@ export default function MediaHub() {
         {/* 3. PILLAR GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full mb-12">
           
-          <a href="https://youtu.be/c3TFhMDaf4w?si=d85QKXGEoOArUPtO" target="_blank" rel="noopener noreferrer" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl">
-            <img src="/liminal-minds-bg.jpg" alt="Minds" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700" />
+          <a href="https://youtu.be/c3TFhMDaf4w?si=d85QKXGEoOArUPtO" target="_blank" rel="noopener noreferrer" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl transition-all duration-500 hover:border-white/40 active:scale-95">
+            <img src="/liminal-minds-bg.jpg" alt="Minds" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-active:opacity-100 group-active:grayscale-0 transition-all duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <div className="relative z-20">
               <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 uppercase mb-4 block group-hover:text-white/60 transition-colors">Inner Protocol</span>
@@ -100,8 +100,8 @@ export default function MediaHub() {
             </div>
           </a>
 
-          <Link href="/originals" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl">
-            <img src="/arc-originals-bg.jpg" alt="Originals" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700" />
+          <Link href="/originals" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl transition-all duration-500 hover:border-white/40 active:scale-95">
+            <img src="/arc-originals-bg.jpg" alt="Originals" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-active:opacity-100 group-active:grayscale-0 transition-all duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <div className="relative z-20">
               <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 uppercase mb-4 block group-hover:text-white/60 transition-colors">Core Universe</span>
@@ -110,12 +110,12 @@ export default function MediaHub() {
             </div>
           </Link>
 
-          <Link href="/readycheck-av" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl">
-            <img src="/ready-check-logo.jpg" alt="AV" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0 transition-all duration-700" />
+          <Link href="/readycheck-av" className="pillar-node group relative h-[650px] overflow-hidden rounded-[3.5rem] border border-white/10 bg-white/[0.01] backdrop-blur-3xl flex flex-col justify-end text-center p-10 shadow-2xl transition-all duration-500 hover:border-white/40 active:scale-95">
+            <img src="/ready-check-logo.jpg" alt="AV" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-active:opacity-100 group-active:grayscale-0 transition-all duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <div className="relative z-20">
               <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 uppercase mb-4 block group-hover:text-white/60 transition-colors">Technical Signal</span>
-              {/* ReadyCheck Centering Fix: Shrinks and Wraps on mobile */}
+              {/* ReadyCheck text centering and size fix */}
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold italic uppercase mb-2 tracking-tighter leading-tight">
                 ReadyCheck<br className="md:hidden" /> AV
               </h3>
@@ -125,8 +125,8 @@ export default function MediaHub() {
         </div>
 
         {/* 4. THE LIORA SIGNAL PANEL */}
-        <Link href="/liora-signal" className="pillar-node group relative w-full h-64 rounded-[3.5rem] border border-white/10 bg-black overflow-hidden flex items-center justify-between px-16 shadow-2xl mt-12 mb-32">
-          <img src="/liora-signal-bg.jpg" alt="Liora" className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-100 transition-all duration-1000" />
+        <Link href="/liora-signal" className="pillar-node group relative w-full h-64 rounded-[3.5rem] border border-white/10 bg-black overflow-hidden flex items-center justify-between px-16 shadow-2xl mt-12 mb-32 transition-all duration-500 hover:border-white/40 active:scale-95">
+          <img src="/liora-signal-bg.jpg" alt="Liora" className="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-active:opacity-100 group-active:grayscale-0 transition-all duration-1000" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
           <div className="relative z-20 flex flex-col text-left">
             <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 uppercase mb-2">The Starlight Shards Continuum</span>
@@ -139,13 +139,7 @@ export default function MediaHub() {
 
         {/* 5. GLOWING FACEBOOK LINK & SOCIALS */}
         <div className="mb-48 flex flex-col items-center text-center">
-          
-          <a 
-            href="https://www.facebook.com/profile.php?id=61583994562975" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="pillar-node group flex flex-col items-center cursor-pointer mb-16 p-8 rounded-[3.5rem]"
-          >
+          <a href="https://www.facebook.com/profile.php?id=61583994562975" target="_blank" rel="noopener noreferrer" className="pillar-node group flex flex-col items-center cursor-pointer mb-16 p-8 rounded-[3.5rem] transition-all duration-500 active:scale-95">
             <span className="text-[9px] font-mono tracking-[1em] text-white/40 uppercase opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-2 group-hover:translate-y-0">
               [ DIRECT_EXTERNAL_LINK ]
             </span>
@@ -157,13 +151,7 @@ export default function MediaHub() {
 
           <div className="flex gap-12 md:gap-24 items-center justify-center opacity-40 group hover:opacity-100 transition-opacity duration-700">
             {socials.map((social) => (
-              <a 
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-white transition-all duration-500 hover:[animation:icon-pulse_2s_ease-in-out_infinite]"
-              >
+              <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-all duration-500 hover:[animation:icon-pulse_2s_ease-in-out_infinite]">
                 {social.icon}
               </a>
             ))}
